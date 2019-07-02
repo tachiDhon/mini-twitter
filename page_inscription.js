@@ -48,16 +48,27 @@ $(document).ready(function(){
                 $.post(
                     'connexion.php',
                     {
-                    email : $('#email').val(),
-                    mdp : $('#mdp').val()
+                    email : $('#email_co').val(),
+                    mdp : $('#mdp_co').val()
                 },
                 mon_callback,
                 'text',
             );
 
         function mon_callback(data){
-            if (data == "Bienvenu"){
-                document.location.href="tweetlist.php";
+            if (data == "Addresse mail incorecte") 
+            {
+                alert(data)
+            }
+
+            if (data == "Mot de passe incorecte")
+            {
+                alert(data)
+            }
+
+            if (data == "bienvenue")
+            {
+                alert(data)
             }
         }    
     });

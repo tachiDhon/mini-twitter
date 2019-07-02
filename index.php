@@ -44,21 +44,21 @@
 					<form id="connexion" method="POST">
 						<div class="cont_form_login">
 							<h2>Connexion</h2>
-							<input type="email" placeholder="Adresse mail" name="email">
-							<input type="password" placeholder="Mot de passe" name="mdp">
+							<input type="email" placeholder="Adresse mail" id="email_co" name="email" required>
+							<input type="password" placeholder="Mot de passe" id="mdp_co" name="mdp" required>
 							<button class="btn_login" onclick="cambiar_login()">SE CONNECTER</button>
 						</div>
 					</form>
 					<form id="inscription" method="POST">
 						<div class="cont_form_sign_up">
 							<h2>Inscription</h2>
-							<input type="text" placeholder="Nom" id="nom" name="nom">
-							<input type="text" placeholder="Prénom" id="prenom" name="prenom">
-							<input type="text" placeholder="Pseudo" id="pseudo" name="pseudo">
-							<input type="date" id="birthdate" name="birthdate">
-							<input type="text" placeholder="Pays" id="pays" name="pays">
-							<input type="email" placeholder="Adresse mail" id="email" name="email">
-							<input type="password" placeholder="Mot de passe" id="mdp" name="mdp">
+							<input type="text" placeholder="Nom" id="nom" name="nom" required>
+							<input type="text" placeholder="Prénom" id="prenom" name="prenom" required>
+							<input type="text" placeholder="Pseudo" id="pseudo" name="pseudo" required>
+							<input type="date" id="birthdate" name="birthdate" required>
+							<input type="text" placeholder="Pays" id="pays" name="pays" required>
+							<input type="email" placeholder="Adresse mail" id="email" name="email" required>
+							<input type="password" placeholder="Mot de passe" id="mdp" name="mdp" required>
 							<button class="btn_sign_up" onclick="cambiar_sign_up()">S'INSCRIRE</button>
 						</div>
 					</form>

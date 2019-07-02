@@ -8,7 +8,7 @@ class Connexion_BDD {
 
 	public function connexion() {
 		try {
-			$this -> bdd = new PDO('mysql:host=localhost;dbname=commont-database;charset=utf8', 'root', 'root');
+			$this -> bdd = new PDO('mysql:host=localhost;dbname=common-database;charset=utf8', 'root', 'root');
 			$this -> bdd -> exec('SET CHARACTER SET utf8');
 			$this -> bdd -> exec('SET NAMES utf8');
 		}
