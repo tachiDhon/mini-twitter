@@ -2,7 +2,11 @@
 
 class Connexion_BDD {
 	protected $bdd;
-	protected function __construct() {
+	public function getbdd() {
+		return $this->bdd;
+	}
+
+	public function connexion() {
 		try {
 			$this -> bdd = new PDO('mysql:host=localhost;dbname=commont-database;charset=utf8', 'root', 'root');
 			$this -> bdd -> exec('SET CHARACTER SET utf8');
@@ -13,3 +17,4 @@ class Connexion_BDD {
 		}
 	}
 }
+

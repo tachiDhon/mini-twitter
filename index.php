@@ -41,49 +41,31 @@
 					<div class="cont_img_back_">
 						<img src="https://www.gtagangwars.de/suite/images/styleLogo-6bd77433ddf78bd8477ea7306e804f677bc925d0.png" alt="" />
 					</div>
-					<div class="cont_form_login">
-						<h2>Connexion</h2>
-						<input type="email" placeholder="Adresse mail" name="email">
-						<input type="password" placeholder="Mot de passe" name="mdp">
-						<button class="btn_login" onclick="cambiar_login()">SE CONNECTER</button>
-					</div>
-					<form method="POST" action="inscription.php">
-						<div class="cont_form_sign_up">
-							<h2>Inscription</h2>
-							<input type="text" placeholder="Nom" name="nom">
-							<input type="text" placeholder="Prénom" name="prenom">
-							<input type="date" name="birthdate">
-							<input type="text" placeholder="Pays" name="pays">
+					<form id="connexion" method="POST">
+						<div class="cont_form_login">
+							<h2>Connexion</h2>
 							<input type="email" placeholder="Adresse mail" name="email">
 							<input type="password" placeholder="Mot de passe" name="mdp">
+							<button class="btn_login" onclick="cambiar_login()">SE CONNECTER</button>
+						</div>
+					</form>
+					<form id="inscription" method="POST">
+						<div class="cont_form_sign_up">
+							<h2>Inscription</h2>
+							<input type="text" placeholder="Nom" id="nom" name="nom">
+							<input type="text" placeholder="Prénom" id="prenom" name="prenom">
+							<input type="text" placeholder="Pseudo" id="pseudo" name="pseudo">
+							<input type="date" id="birthdate" name="birthdate">
+							<input type="text" placeholder="Pays" id="pays" name="pays">
+							<input type="email" placeholder="Adresse mail" id="email" name="email">
+							<input type="password" placeholder="Mot de passe" id="mdp" name="mdp">
 							<button class="btn_sign_up" onclick="cambiar_sign_up()">S'INSCRIRE</button>
 						</div>
 					</form>
+					<script src="page_inscription.js"></script>
 				</div>
 			</div>
 		</div>
 	</div>
-	<script>
-    /* ------------------------------------ Click on login and Sign Up to  changue and view the effect ---------------------------------------*/
-	function cambiar_login() {
-		document.querySelector('.cont_forms').className = "cont_forms cont_forms_active_login";  
-		document.querySelector('.cont_form_login').style.display = "block";
-		document.querySelector('.cont_form_sign_up').style.opacity = "0";               
-		setTimeout(function(){  document.querySelector('.cont_form_login').style.opacity = "1"; },400);  
-		setTimeout(function(){    
-		document.querySelector('.cont_form_sign_up').style.display = "none";
-		},200);  
-	}
-
-	function cambiar_sign_up(at) {
-		document.querySelector('.cont_forms').className = "cont_forms cont_forms_active_sign_up";
-		document.querySelector('.cont_form_sign_up').style.display = "block";
-		document.querySelector('.cont_form_login').style.opacity = "0";
-		setTimeout(function(){  document.querySelector('.cont_form_sign_up').style.opacity = "1";
-		},100);  
-		setTimeout(function(){   document.querySelector('.cont_form_login').style.display = "none";
-		},400);  
-	}   
-	</script>
 </body>
 </html>
