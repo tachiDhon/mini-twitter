@@ -11,7 +11,7 @@ class Connexion extends Connexion_BDD
 	private $mdp;
 	protected $bdd;
 	
-	function __construct()
+	public function __construct()
 	{
 		$this->email = $_POST['email'];
 		$this->mdp = $_POST['mdp'];
@@ -43,17 +43,17 @@ class Connexion extends Connexion_BDD
 
 		if ($verifie_email->rowcount() == 0) 
 		{
-			echo "Addresse mail incorecte"; 
+			echo "Adresse mail incorrecte"; 
 		}
 
 		elseif ($verifie_mdp->rowcount() == 0) 
 		{
-			echo "Mot de passe incorecte"; 
+			echo "Mot de passe incorrect"; 
 		}
 
 		else
 		{
-			echo "bienvenue";
+			echo "Bienvenu sur Tweet Academie!";
 		}
 
 

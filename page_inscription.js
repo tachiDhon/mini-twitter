@@ -66,9 +66,10 @@ $(document).ready(function(){
                 alert(data)
             }
 
-            if (data == "bienvenue")
+            if (data == "Bienvenue sur Tweet Academie!")
             {
                 alert(data)
+                document.location.href="http://localhost:8000/tweetlist.php"
             }
         }    
     });

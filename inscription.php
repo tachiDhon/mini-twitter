@@ -80,9 +80,6 @@ class user extends Connexion_BDD {
 				$id = $data['id'];
 			}
 			$requete3 = $this->bdd->query("INSERT INTO user_info (`id_user`, `birthdate`, `pays`, `name`, `surname`) VALUES (" . $id . ", '" . $this->date_naissance . "', '" . $this->pays . "', '" . $this->nom . "', '" . $this->prenom . "')");
-			var_dump($requete);
-			var_dump($requete2);
-			var_dump($requete3);
 			echo "Votre compte a bien été créé. Vous pouvez à présent vous connecter!";
 		}
 	}

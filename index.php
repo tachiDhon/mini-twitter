@@ -13,7 +13,7 @@
 </head>
 <body>
 	<div class="cotn_principal">
-		<img src="https://fontmeme.com/temporary/9185935e815d0d5666fbc02a8098eab1.png">
+		<img src="logo.png">
 		<div class="cont_centrar">
 			<div class="cont_login">
 				<div class="cont_info_log_sign_up">
