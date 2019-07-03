@@ -56,19 +56,18 @@ $(document).ready(function(){
             );
 
         function mon_callback(data){
-            if (data == "Addresse mail incorecte") 
+            if (data == "Adresse mail incorrecte") 
             {
                 alert(data)
             }
 
-            if (data == "Mot de passe incorecte")
+            if (data == "Mot de passe incorrect")
             {
                 alert(data)
             }
 
             if (data == "Bienvenue sur Tweet Academie!")
             {
-                alert(data)
                 document.location.href="http://localhost:8000/tweetlist.php"
             }
         }    
