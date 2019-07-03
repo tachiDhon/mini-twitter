@@ -66,8 +66,8 @@ $(document).ready(function(){
                 alert(data)
             }
 
-            if (data == "Bienvenue sur Tweet Academie!")
-            {
+            else {
+                alert(data)
                 document.location.href="tweetlist.php"
             }
         }    

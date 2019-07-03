@@ -36,9 +36,9 @@ class Connexion extends Connexion_BDD
 
 	public function User_connect()
 	{
-		$verifie_email = $this->bdd->query('SELECT mail FROM users WHERE mail = "' . $this->email . '"');
+		$verifie_email = $this->bdd->query('SELECT * FROM users WHERE mail = "' . $this->email . '"');
 
-		$verifie_mdp = $this->bdd->query('SELECT password FROM users WHERE password = "' . $this->mdp . '"');
+		$verifie_mdp = $this->bdd->query('SELECT * FROM users WHERE password = "' . $this->mdp . '"');
 
 
 		if ($verifie_email->rowcount() == 0) 
@@ -55,10 +55,14 @@ class Connexion extends Connexion_BDD
 		{
 			echo "Bienvenue sur Tweet Academie!";
 
+			while($donnees = $verifie_email->fetch()) {
+				$id = $donnees['id'];
+			}
+
 			session_start();
 			
 			$_SESSION['email'] = $this->email;
-
+			$_SESSION['id'] = $id;
 		}
 
 

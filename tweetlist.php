@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,7 +22,7 @@
 </head>
 <body>
 	<nav class="navbar navbar-light bg-white">
-		<img src="minilogo.png">
+		<a href="tweetlist.php"><img src="minilogo.png"></a>
 		<form class="form-inline">
 			<div class="input-group">
 				<input type="text" class="form-control" aria-label="Recipient's username" aria-describedby="button-addon2">
@@ -73,9 +77,9 @@
 						<div class="tab-content" id="myTabContent">
 							<div class="tab-pane fade show active" id="posts" role="tabpanel" aria-labelledby="posts-tab">
 								<div class="form-group">
-									<form method="POST">
+									<form id="tweeet" method="POST">
 										<label class="sr-only" for="message">post</label>
-										<textarea class="form-control" id="message" rows="3" maxlength="140" placeholder="Ecris ton tweet ici ma gueule!"></textarea>
+										<textarea class="form-control" id="tweet-contenu" name="tweet-contenu" rows="3" maxlength="140" placeholder="Ecris ton tweet ici ma gueule!"></textarea>
 									</form>
 								</div>
 
@@ -236,5 +240,6 @@
 		</div>
 	</div>
 </div>
+<script src="script-tweet.js"></script>
 </body>
 </html>
