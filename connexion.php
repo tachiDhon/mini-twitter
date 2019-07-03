@@ -53,7 +53,12 @@ class Connexion extends Connexion_BDD
 
 		else
 		{
-			echo "Bienvenu sur Tweet Academie!";
+			echo "bienvenue";
+
+			session_start();
+
+			$_SESSION['email'] = $this->email;
+
 		}
 
 
