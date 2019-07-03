@@ -54,6 +54,10 @@ class Connexion extends Connexion_BDD
 		else
 		{
 			echo "bienvenue";
+
+			session_start();
+
+			$_SESSION['email'] = $this->email;
 		}
 
 
