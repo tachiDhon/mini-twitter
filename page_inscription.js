@@ -47,7 +47,7 @@ $(document).ready(function(){
                 event.preventDefault();
                 $.post(
                     'connexion.php',
-                    {
+                {
                     email : $('#email_co').val(),
                     mdp : $('#mdp_co').val()
                 },

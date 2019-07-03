@@ -1,18 +1,20 @@
-$(document).ready(function()){
-	$("#tweet").submit(function(event){
+$(document).ready(function(){
+
+	$("#tweeet").submit(function(event){
 		event.preventDefault();
+
+		alert('Bien vu igo')
 		$.post(
 			'tweet.php',
 			{
-				email : $_SESSION['email'].val(),
-				tweet : $('#tweet').val()
+				tweet : $('#tweet-contenu').val()
 			},
 			callback,
 			'text',
-	);
+		);
 
 		function callback(data){
-			box.html("test")
+			alert(data)
 		}
 	});
-};
+});

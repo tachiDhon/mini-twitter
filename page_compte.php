@@ -289,9 +289,6 @@ data-fouc-class-names="swift-loading no-nav-banners"
   </ul>
 
     <ul class="nav secondary-nav session-dropdown" id="session">
-      <li class="dropdown js-session">
-          <a href="/login" class="dropdown-toggle js-dropdown-toggle dropdown-signin" role="button" id="signin-link" data-nav="login">
-            <small>Have an account?</small> <span class="emphasize"> Log in</span><span class="caret"></span>
           </a>
           <div class="dropdown-menu dropdown-form dropdown-menu--rightAlign is-forceRight" id="signin-dropdown">
             <div class="dropdown-caret right"> <span class="caret-outer"></span> <span class="caret-inner"></span> </div>
