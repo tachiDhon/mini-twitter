@@ -55,9 +55,9 @@ class Connexion extends Connexion_BDD
 		{
 			echo "Bienvenue sur Tweet Academie!";
 
-			/*session_start();
-
-			$_SESSION['email'] = $this->email;*/
+			session_start();
+			
+			$_SESSION['email'] = $this->email;
 
 		}
 
