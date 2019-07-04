@@ -57,12 +57,14 @@ class Connexion extends Connexion_BDD
 
 			while($donnees = $verifie_email->fetch()) {
 				$id = $donnees['id'];
+				$pseudo = $donnees['pseudo'];
 			}
 
 			session_start();
 			
 			$_SESSION['email'] = $this->email;
 			$_SESSION['id'] = $id;
+			$_SESSION['pseudo'] = $pseudo;
 		}
 
 
