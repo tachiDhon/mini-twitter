@@ -67,7 +67,6 @@ $(document).ready(function(){
             }
 
             else {
-                alert(data)
                 document.location.href="tweetlist.php"
             }
         }    

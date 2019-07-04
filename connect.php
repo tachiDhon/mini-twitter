@@ -17,4 +17,3 @@ class Connexion_BDD {
 		}
 	}
 }
-
