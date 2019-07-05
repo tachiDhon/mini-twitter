@@ -1,5 +1,5 @@
 <?php
-session_start();
+    session_start();
 ?>
 
 <!DOCTYPE html>
@@ -8,6 +8,7 @@ session_start();
     <meta charset="utf-8">
     <title>Tweet @cademie</title>
     <link rel="stylesheet" href="styletweet.css" type="text/css"/>
+    <link rel="stylesheet" type="text/css" href="style_tweet.css">
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
@@ -89,6 +90,16 @@ session_start();
                     </div>
                 </div>
             </div>
+
         <script type="text/javascript" src="script-tweetlist.js"></script>
     </body>
     </html>
+
+        </div>
+    </body>
+    </html>
+
+    <?php
+    include('page_membre.php');
+    ?>
+
