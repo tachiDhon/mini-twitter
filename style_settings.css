@@ -5,3 +5,32 @@ body {
     background: linear-gradient(135deg,  #cfd8dc 0%,#607d8b 100%,#b0bec5 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cfd8dc', endColorstr='#b0bec5',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
+
+.container {
+	margin-top: 20px;
+}
+
+.nav {
+	background-color: white;
+	border-radius: 20px;
+	margin-top: 15px;
+}
+
+input {
+	width: 40%;
+    padding: 5px;
+    border: 2px solid #bce8f1;
+}
+
+a:hover {
+	border-radius: 20px;
+}
+
+input [type=submit] {
+	margin: 0 auto;
+}
+
+::placeholder {
+    color: grey;
+    opacity: 1;
+}

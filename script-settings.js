@@ -15,3 +15,25 @@ $(document).ready(function()
         $('#' + target).show();
     });
 });
+
+$(document).ready(function(){
+
+    $("#compte").submit(function(event){
+        event.preventDefault();
+        $.post(
+            'maj-settings1.php',
+            {
+                pseudo : $('#pseudo').val(),
+                email : $('#email').val(),
+                new_mdp : $('#new_mdp').val(),
+                mdp_confirmation : $('#mdp_confirmation').val() 
+            },
+            callback,
+            'text',
+            );
+
+        function callback(data){
+            alert(data)
+        }
+    });
+});
