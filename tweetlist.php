@@ -51,7 +51,7 @@ session_start();
 					</ul>
 				</div>
 			</div>
-			<div class="col-md-6 gedf-main">
+			<div id="liste" class="col-md-6 gedf-main">
 
 				<!--- \\\\\\\Post-->
 				<div class="card gedf-card">
@@ -68,7 +68,7 @@ session_start();
 					<div class="card-body">
 						<div class="tab-content" id="myTabContent">
 							<div class="tab-pane fade show active" id="posts" role="tabpanel" aria-labelledby="posts-tab">
-								<div class="form-group">
+								<div id="form_tweet" class="form-group">
 									<form id="tweeet" method="POST">
 										<label class="sr-only" for="message">post</label>
 										<textarea class="form-control" id="tweet-contenu" name="tweet-contenu" rows="3" maxlength="140" placeholder="Ecris ton tweet ici ma gueule!"></textarea>
@@ -109,7 +109,7 @@ session_start();
 			<!-- Post /////-->
 
 			<!--- \\\\\\\Post-->
-			<div class="card gedf-card">
+			<div id="poste" class="card gedf-card">
 				<div class="card-header">
 					<div class="d-flex justify-content-between align-items-center">
 						<div class="d-flex justify-content-between align-items-center">

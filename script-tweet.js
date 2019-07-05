@@ -10,11 +10,12 @@ $(document).ready(function(){
 				tweet : $('#tweet-contenu').val()
 			},
 			callback,
-			'text',
+			'html',
 		);
 
 		function callback(data){
-			alert(data)
+            $('#poste').html('')
+			.append(data)
 		}
 	});
 });
