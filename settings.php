@@ -45,7 +45,7 @@ session_start();
 				</div>
 				<div class="panel panel-info" style="margin: 1em;">
 					<div class="panel-heading">
-						<h3 class="panel-title">Last Password Change</h3>
+						<h3 class="panel-title">Tweet Name</h3>
 
 					</div>
 					<div class="panel-body">
@@ -84,7 +84,7 @@ session_start();
 			</div>
 
 			<div class="col-md-9  admin-content" id="change-password">
-				<form action="/password" method="post">
+				<form method="POST">
 
 
 					<div class="panel panel-info" style="margin: 1em;">
@@ -138,9 +138,7 @@ session_start();
 					</div>
 					<div class="panel-body">
 						Do you really want to logout ?  
-						<a  href="#" class="label label-danger"
-						onclick="event.preventDefault();
-						document.getElementById('logout-form').submit();">
+						<a  href="deconnexion.php" class="label label-danger">
 						<span >   Yes   </span>
 					</a>    
 					<a href="/account" class="label label-success"> <span >  No   </span></a>

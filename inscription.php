@@ -67,8 +67,10 @@ class user extends Connexion_BDD {
 	}
 
 	public function newUser() {
-		$verifie_email = $this->bdd->query('SELECT mail FROM users WHERE mail = "' . $this->email . '"');
-		$verifie_pseudo = $this->bdd->query('SELECT pseudo FROM users WHERE pseudo = "' . $this->pseudo . '"');
+		$verifie_email = $this->bdd->prepare('SELECT mail FROM users WHERE mail = ?');
+		$test = $verifie_email->execute(array($this->email));
+		$verifie_pseudo = $this->bdd->query('SELECT pseudo FROM users WHERE pseudo = ?');
+		$test2 = $verifie_pseudo->execute(array($this->pseudo));
 		if ($verifie_email->rowcount() >= 1) {
 			echo "Cette adresse mail est déjà utilisée!";
 		}elseif ($verifie_pseudo->rowcount() >= 1) {

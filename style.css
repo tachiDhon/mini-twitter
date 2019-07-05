@@ -164,8 +164,8 @@ z-index: 1;
 
 .col_md_login > h2 {
   font-weight: 400;
-margin-top: 70px;
-    color: #757575;
+  margin-top: 70px;
+  color: #757575;
 }
 
 .col_md_login > p {
@@ -316,7 +316,7 @@ transition: all 0.5s;
   
 .cont_form_sign_up > input {
 text-align: left;
-  padding: 10px 5px;
+  padding: 7px 5px;
 margin-left: 10px;
 margin-top: 5px;
   width: 260px;

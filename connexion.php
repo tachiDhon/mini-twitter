@@ -36,10 +36,11 @@ class Connexion extends Connexion_BDD
 
 	public function User_connect()
 	{
-		$verifie_email = $this->bdd->query('SELECT * FROM users WHERE mail = "' . $this->email . '"');
+		$verifie_email = $this->bdd->prepare('SELECT * FROM users WHERE mail = ?');
+		$test = $verifie_email->execute(array($this->email));
 
-		$verifie_mdp = $this->bdd->query('SELECT * FROM users WHERE password = "' . $this->mdp . '"');
-
+		$verifie_mdp = $this->bdd->prepare('SELECT * FROM users WHERE password = ?');
+		$test2 = $verifie_mdp->execute(array($this->mdp));
 
 		if ($verifie_email->rowcount() == 0) 
 		{
