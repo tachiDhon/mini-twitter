@@ -35,5 +35,10 @@ session_start();
 			</textarea>
 			<input type="submit" text="submit">
 		</div>
+		<div class="affiche_tweet">
+		<?php	
+			include('page_membre.php');
+		?>
+		</div>
 	</body>
 	</html>

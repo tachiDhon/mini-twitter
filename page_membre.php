@@ -71,12 +71,7 @@ class Tweets extends Connexion_BDD
 							</div>
 						<div>
 							<div class="dropdown">
-								<div class="dropdown-menu dropdown-menu-right" aria-labelledby="gedf-drop1">
-									<div class="h6 dropdown-header">Configuration</div>
-									<a class="dropdown-item" href="#">Save</a>
-									<a class="dropdown-item" href="#">Hide</a>
-									<a class="dropdown-item" href="#">Report</a>
-								</div>
+					
 							</div>
 						</div>
 					</div>
@@ -89,9 +84,9 @@ class Tweets extends Connexion_BDD
 					</p>
 				</div>
 				<div class="card-footer">
-					<a href="#" class="card-link"><i class="fa fa-gittip"></i> Like</a>
-					<a href="#" class="card-link"><i class="fa fa-comment"></i> Comment</a>
-					<a href="#" class="card-link"><i class="fa fa-mail-forward"></i> Share</a>
+					<a href="#" class="card-link"><i class="fa fa-gittip"></i><img class="like" src="https://img.icons8.com/material-outlined/24/000000/filled-like.png"> Like</a>
+					<a href="#" class="card-link"><i class="fa fa-mail-forward"></i><img class="retweet" src="https://img.icons8.com/material/24/000000/retweet.png"> Retweet</a>
+					<a href="#" class="card-link"><i class="fa fa-comment"></i><img class="comment" src="https://img.icons8.com/android/24/000000/comments.png"> Comment</a>
 				</div>
 			</div>
 			</div>
