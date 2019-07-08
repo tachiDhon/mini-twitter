@@ -124,7 +124,7 @@ session_start();
 						<div>
 							<div class="dropdown">
 								<button class="btn btn-link dropdown-toggle" type="button" id="gedf-drop1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-									<i class="fa_1"></i>
+									<i class="fa fa-ellipsis-h"></i>
 								</button>
 								<div class="dropdown-menu dropdown-menu-right" aria-labelledby="gedf-drop1">
 									<div class="h6 dropdown-header">Configuration</div>

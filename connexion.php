@@ -1,16 +1,16 @@
-<?php 
+<?php
 
 include('connect.php');
 
 /**
- * 
+ *
  */
 class Connexion extends Connexion_BDD
 {
 	private $email;
 	private $mdp;
 	protected $bdd;
-	
+
 	public function __construct()
 	{
 		$this->email = $_POST['email'];
@@ -42,14 +42,14 @@ class Connexion extends Connexion_BDD
 		$verifie_mdp = $this->bdd->prepare('SELECT * FROM users WHERE password = ?');
 		$test2 = $verifie_mdp->execute(array($this->mdp));
 
-		if ($verifie_email->rowcount() == 0) 
+		if ($verifie_email->rowcount() == 0)
 		{
-			echo "Adresse mail incorrecte"; 
+			echo "Adresse mail incorrecte";
 		}
 
 		elseif ($verifie_mdp->rowcount() == 0) 
 		{
-			echo "Mot de passe incorrect"; 
+			echo "Mot de passe incorrect";
 		}
 
 		else
@@ -62,7 +62,7 @@ class Connexion extends Connexion_BDD
 			}
 
 			session_start();
-			
+
 			$_SESSION['email'] = $this->email;
 			$_SESSION['id'] = $id;
 			$_SESSION['pseudo'] = $pseudo;
