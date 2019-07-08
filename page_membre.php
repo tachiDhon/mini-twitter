@@ -1,7 +1,5 @@
 <?php
 
-session_start();
-
 include('connect.php');
 
 
@@ -52,7 +50,10 @@ class Tweets extends Connexion_BDD
 
 	public function affiche_tweet()
 	{
-		$requete = $this->bdd->query("SELECT * FROM post WHERE id_user = " . $_SESSION['id']);
+		$sql = "SELECT * FROM post WHERE id_user = " . $_SESSION['id'] . " ORDER BY post_date DESC";
+		$requete = $this->bdd->query($sql);
+		var_dump($requete);
+		print_r($this->bdd->errorInfo());
 
 
 		if ($requete->rowcount() != 0) 

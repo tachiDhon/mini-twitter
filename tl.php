@@ -31,22 +31,23 @@ session_start();
 		</ul>
 	</nav>
 	<div class="wrapper">
-		<form method="POST">
+		<form method="POST" id="post_tweet">
 			<h1>C'est par ici pour écrire ton tweet !</h1>
 			<textarea name="the-textarea" id="the-textarea" maxlength="140" placeholder="Quoi de neuf ?" autofocus></textarea>
 			<div id="the-count">
 				<span id="current">0</span>
 				<span id="maximum">/ 140</span>
 			</div>
-			<input type="button" name="send" id="send" value="Envoyer">
+			<input type="submit" name="send" id="send" value="Publier">
 		</form>
 	</div>
 
-		<div class="affiche_tweet">
+		<div id="affiche_tweet">
 		<?php
 			include('page_membre.php');
 		?>
 		</div>
 	<script type="text/javascript" src="script-tl.js"></script>
+	<script type="text/javascript" src="script-tweet.js"></script>
 </body>
 </html>
