@@ -14,4 +14,29 @@ $(document).ready(function()
         var target = $(this).attr('data-target-id');
         $('#' + target).show();
     });
+<<<<<<< HEAD
+=======
+});
+
+$(document).ready(function(){
+
+    $("#compte").submit(function(event){
+        event.preventDefault();
+        $.post(
+            'maj-settings.php',
+            {
+                pseudo : $('#pseudo').val(),
+                email : $('#email').val(),
+                new_mdp : $('#new_mdp').val(),
+                mdp_confirmation : $('#mdp_confirmation').val() 
+            },
+            callback,
+            'text',
+            );
+
+        function callback(data){
+            alert(data)
+        }
+    });
+>>>>>>> 9d9ea75e916ac5a1b897639f085480baf0653915
 });
