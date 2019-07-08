@@ -54,18 +54,10 @@ class Tweets extends Connexion_BDD
 	public function affiche_tweet()
 	{
 		$requete = $this->bdd->query("SELECT * FROM post WHERE id_user = " . $_SESSION['id']);
-		var_dump($requete);
-
-		$tweet = $requete->fetch();
-
-		//print_r($tweet);
-
-		$nbr_tweet = count($tweet);
 
 
-		if ($nbr_tweet != 0) 
+		if ($requete->rowcount() != 0) 
 		{
-			$i = 0;
 
 			while ($tweet = $requete->fetch())
 			{
