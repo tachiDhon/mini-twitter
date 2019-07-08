@@ -38,20 +38,15 @@ session_start();
 				<span id="current">0</span>
 				<span id="maximum">/ 140</span>
 			</div>
-		</div>
-
-		<div class="affiche_tweet">
-		<?php	
-			include('page_membre.php');
-		?>
-		</div>
-		<script type="text/javascript" src="script-tl.js"></script>
-
-	</body>
-	</html>
 			<input type="button" name="send" id="send" value="Envoyer">
 		</form>
 	</div>
+
+		<div class="affiche_tweet">
+		<?php
+			include('page_membre.php');
+		?>
+		</div>
 	<script type="text/javascript" src="script-tl.js"></script>
 </body>
 </html>
