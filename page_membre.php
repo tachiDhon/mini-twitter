@@ -22,7 +22,6 @@ class Tweets extends Connexion_BDD
 		$this->email = $_SESSION['email'];
 		$this->id = $_SESSION['id'];
 		$this->pseudo = $_SESSION["pseudo"];
-		$this->contenu = $_POST['tweet'];
 		$this->bdd = new Connexion_BDD;
 	}
 
