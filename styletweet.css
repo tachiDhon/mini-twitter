@@ -68,7 +68,6 @@ nav a {
 
 nav > ul > li > a {
   padding: 20px 30px;
-  color: #FFF;
 }
 
 nav li:hover .submenu {
@@ -87,7 +86,7 @@ nav li:hover .submenu {
 .submenu li a {
   padding: 15px 30px;
   font-size: 13px;
-  color: #222538;
+  color: black;
   width: 270px;
   background-color: #424558;
 }
@@ -463,23 +462,27 @@ nav input[type=checkbox]:checked ~ ul {
 /* CSS POUR LA ZONE DE TWEET */
 
 .wrapper {
-  max-width: 75%;
+  max-width: 35%;
   margin: auto;
 }
 
 
 h1 { 
-  color: #555; 
+  background-color: #424558;
+  border-radius: 10px;
+  color: black; 
   margin: 3rem 0 1rem 0; 
-  padding: 0;
+  padding: 5px 7px;
   font-size: 1.5rem;
+  text-align: center;
 }
 
 textarea {
   width: 100%;
   min-height: 100px;
   resize: none;
-  border-radius: 8px;
+  font-size: 16px;
+  border-radius: 10px;
   border: 1px solid #ddd;
   padding: 0.5rem;
   color: #666;
@@ -499,4 +502,13 @@ textarea {
   float: right;
   padding: 0.1rem 0 0 0;
   font-size: 0.875rem;
+}
+
+input {
+  border: none;
+  border-radius: 10px;
+  padding: 5px 7px;
+  background-color: #424558;
+  color: black;
+  margin-top: 5px;
 }
