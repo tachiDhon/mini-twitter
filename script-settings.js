@@ -21,7 +21,7 @@ $(document).ready(function(){
     $("#compte").submit(function(event){
         event.preventDefault();
         $.post(
-            'maj-settings1.php',
+            'maj-settings.php',
             {
                 pseudo : $('#pseudo').val(),
                 email : $('#email').val(),

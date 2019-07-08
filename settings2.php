@@ -6,10 +6,9 @@ session_start();
 <html>
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Tweet @cademie</title>
+	<link rel="stylesheet" href="style_settings.css" type="text/css"/>
 	<link rel="stylesheet" href="styletweet.css" type="text/css"/>
-	<script src="http://code.jquery.com/jquery-1.5.js"></script>
 </head>
 <body>
 	<nav>
@@ -30,17 +29,5 @@ session_start();
 			</li>
 		</ul>
 	</nav>
-	<div class="wrapper">
-		<form method="POST">
-			<h1>C'est par ici pour écrire ton tweet !</h1>
-			<textarea name="the-textarea" id="the-textarea" maxlength="140" placeholder="Quoi de neuf ?" autofocus></textarea>
-			<div id="the-count">
-				<span id="current">0</span>
-				<span id="maximum">/ 140</span>
-			</div>
-			<input type="button" name="send" id="send" value="Envoyer">
-		</form>
-	</div>
-	<script type="text/javascript" src="script-tl.js"></script>
 </body>
 </html>
