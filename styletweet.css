@@ -282,6 +282,39 @@ nav input[type=checkbox]:checked ~ ul {
   color: #1781a0;
 }
 
+/* Style pour recherche.php */
+
+form.search_form input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
+}
+
+form.search_form button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+}
+
+form.search_form button:hover {
+  background: #0b7dda;
+}
+
+form.search_form::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
 
 @media screen and (max-width: 680px){
   .menu-mobile {
@@ -516,37 +549,4 @@ input {
   background-color: #424558;
   color: black;
   margin-top: 5px;
-}
-
-/* Style pour recherche.php */
-
-form.search_form input[type=text] {
-  padding: 10px;
-  font-size: 17px;
-  border: 1px solid grey;
-  float: left;
-  width: 80%;
-  background: #f1f1f1;
-}
-
-form.search_form button {
-  float: left;
-  width: 20%;
-  padding: 10px;
-  background: #2196F3;
-  color: white;
-  font-size: 17px;
-  border: 1px solid grey;
-  border-left: none;
-  cursor: pointer;
-}
-
-form.search_form button:hover {
-  background: #0b7dda;
-}
-
-form.search_form::after {
-  content: "";
-  clear: both;
-  display: table;
 }

@@ -1,21 +1,22 @@
 $(document).ready(function(){
 
-	$("#tweeet").submit(function(event){
+	$("#post_tweet").submit(function(event){
 		event.preventDefault();
 
 		alert('Bien vu igo')
 		$.post(
 			'tweet.php',
 			{
-				tweet : $('#tweet-contenu').val()
+				tweet : $('#the-textarea').val()
 			},
 			callback,
 			'html',
 		);
 
 		function callback(data){
-            $('#poste').html('')
-			.append(data)
+            $('#affiche_tweet').html('')
+            location.reload(true)
+			.prepend(data)
 		}
 	});
 });

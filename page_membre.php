@@ -1,7 +1,5 @@
 <?php
 
-session_start();
-
 include('connect.php');
 
 
@@ -22,7 +20,6 @@ class Tweets extends Connexion_BDD
 		$this->email = $_SESSION['email'];
 		$this->id = $_SESSION['id'];
 		$this->pseudo = $_SESSION["pseudo"];
-		$this->contenu = $_POST['tweet'];
 		$this->bdd = new Connexion_BDD;
 	}
 
@@ -53,44 +50,51 @@ class Tweets extends Connexion_BDD
 
 	public function affiche_tweet()
 	{
-		$requete = $this->bdd->query("SELECT * FROM post WHERE id_user = " . $_SESSION['id']);
+		$sql = "SELECT * FROM post WHERE id_user = " . $_SESSION['id'] . " ORDER BY post_date DESC";
+		$requete = $this->bdd->query($sql);
 		var_dump($requete);
+		print_r($this->bdd->errorInfo());
 
-		while ($tweet = $requete->fetch())
+
+		if ($requete->rowcount() != 0) 
 		{
-			echo'<div class="card gedf-card">
-					<div class="card-header">
-					<div class="d-flex justify-content-between align-items-center">
+
+			while ($tweet = $requete->fetch())
+			{
+				echo'<div class="card gedf-card">
+						<div class="card-header">
 						<div class="d-flex justify-content-between align-items-center">
-							<div class="mr-2">
-								<img class="rounded-circle" width="45" src="https://picsum.photos/50/50" alt="">
-							</div>
-							
-								<div class="m-0"><h3>@' . $_SESSION["pseudo"] . '<h3></div>
-								<div class="text-muted h7 mb-2"> <i class="fa fa-clock-o"></i>10 min ago</div>
-							</div>
-						<div>
-							<div class="dropdown">
-					
+							<div class="d-flex justify-content-between align-items-center">
+								<div class="mr-2">
+									<img class="rounded-circle" width="45" src="https://picsum.photos/50/50" alt="">
+								</div>
+								
+									<div class="m-0"><h3>@' . $_SESSION["pseudo"] . '<h3></div>
+									<div class="text-muted h7 mb-2"> <i class="fa fa-clock-o"></i>10 min ago</div>
+								</div>
+							<div>
+								<div class="dropdown">
+						
+								</div>
 							</div>
 						</div>
+
 					</div>
+					<div class="card-body">
 
+						<p class="card-text">
+							' . $tweet['post_content'] . '
+						</p>
+					</div>
+					<div class="card-footer">
+						<a href="#" class="card-link"><i class="fa fa-gittip"></i><img class="like" src="https://img.icons8.com/material-outlined/24/000000/filled-like.png"> Like</a>
+						<a href="#" class="card-link"><i class="fa fa-mail-forward"></i><img class="retweet" src="https://img.icons8.com/material/24/000000/retweet.png"> Retweet</a>
+						<a href="#" class="card-link"><i class="fa fa-comment"></i><img class="comment" src="https://img.icons8.com/android/24/000000/comments.png"> Comment</a>
+					</div>
 				</div>
-				<div class="card-body">
-
-					<p class="card-text">
-						' . $tweet['post_content'] . '
-					</p>
 				</div>
-				<div class="card-footer">
-					<a href="#" class="card-link"><i class="fa fa-gittip"></i><img class="like" src="https://img.icons8.com/material-outlined/24/000000/filled-like.png"> Like</a>
-					<a href="#" class="card-link"><i class="fa fa-mail-forward"></i><img class="retweet" src="https://img.icons8.com/material/24/000000/retweet.png"> Retweet</a>
-					<a href="#" class="card-link"><i class="fa fa-comment"></i><img class="comment" src="https://img.icons8.com/android/24/000000/comments.png"> Comment</a>
-				</div>
-			</div>
-			</div>
-			';
+				';
+			}
 		}
 	}
 }
