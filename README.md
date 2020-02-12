@@ -1,5 +1,6 @@
 # mini-twitter
 Lors de ce projet vous devrez utiliser et maitriser les outils suivants:
+```bash
 • HTML
 • CSS
 • JS
